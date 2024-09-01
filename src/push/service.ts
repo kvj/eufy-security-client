@@ -403,7 +403,7 @@ export class PushNotificationService extends TypedEmitter<PushNotificationServic
                 rootPushLogger.error(`Normalize push message - type - Error`, { error: getError(error), message: message });
             }
 
-            if (normalizedMessage.type >= 10000) {
+            if (normalizedMessage.type >= 10100) {
                 // server push notification
                 const serverPushData = payload.payload as ServerPushData;
                 normalizedMessage.email = serverPushData.email
